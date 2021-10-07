@@ -1,4 +1,4 @@
-public class Utilities {
+public abstract class Utilities {
     public static int suma(
         int a, int b
     ) {
