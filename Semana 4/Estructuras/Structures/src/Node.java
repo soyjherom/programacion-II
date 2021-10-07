@@ -3,6 +3,7 @@ public class Node {
     private char value;
     public Node(final char value){
         this.value = value;
+        int c = Utilities.suma(1, 1);
     }
     public Node(final char value, final Node node){
         this.value = value;

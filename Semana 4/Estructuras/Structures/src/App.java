@@ -1,11 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Node firstNodo = new Node('H', 
-            new Node('E', 
-                new Node('L', 
-                    new Node('L', 
-                        new Node('O')))));
-        // firstNodo.getNext(firstNodo);
+        doubleNodes();
+    }
+
+    private static void doubleNodes(){
         DNode one = new DNode("B",
                     new DNode("A"), 
                     new DNode("C",
@@ -13,5 +11,14 @@ public class App {
                             new DNode("E"))));
         System.out.println(one.goForward(one));
         System.out.println(one.goBackwards(one));
+    }
+
+    private static void single(){
+        Node firstNodo = new Node('H', 
+            new Node('E', 
+                new Node('L', 
+                    new Node('L', 
+                        new Node('O')))));
+        firstNodo.getNext(firstNodo);
     }
 }
