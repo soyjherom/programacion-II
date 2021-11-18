@@ -14,15 +14,19 @@ public class Facturacion {
         this.factura = new Factura();
         this.factura.setId(this.facturasHechas);
         this.factura.setSubtotal(factura.getSubtotal());
-        this.factura.setImpuestos(this.factura.getSubtotal() * 0.15);
+        this.factura.setImpuestos(
+            this.factura.getSubtotal() * 0.20);
         if(this.porcentajeDescuento > 0)
-            this.factura.setDescuentos(this.factura.getSubtotal() * (this.porcentajeDescuento / 100));
+            this.factura.setDescuentos(
+                this.factura.getSubtotal() * 
+                (this.porcentajeDescuento / 100));
         this.factura.setTotal(
             this.factura.getSubtotal() + 
             this.factura.getImpuestos() - 
             this.factura.getDescuentos()
         );
         this.facturasHechas += 1;
+        this.factura.setFecha(new Date());
         return this.factura;
     }
 }

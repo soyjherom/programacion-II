@@ -15,6 +15,7 @@ public class FaturacionTest {
         Factura miFactura = new Factura();
         miFactura.setSubtotal(300);
         Facturacion facturador = new Facturacion();
+        facturador.porcentajeDescuento = 50d;
         miFactura = facturador.facturar(miFactura);
         assertTrue(150.0d == miFactura.getDescuentos());
     }
