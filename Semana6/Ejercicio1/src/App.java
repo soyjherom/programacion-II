@@ -21,12 +21,20 @@ public class App {
 
         personajes.size(); //tamano
 
+        /*
         personajes
             .stream()
             .map(p -> p.sexo)
             .distinct()
             .collect(toList())
-            .forEach(s -> System.out.println(s.name()));
+            .forEach(s -> System.out.println(s.name()));*/
+
+        personajes
+            .stream()
+            .map(p -> p.sexo)
+            .distinct()
+            .collect(toList())
+            .forEach(System.out::println);
 
         personajes.stream().forEach(p -> System.out.println(p.getNombre() + " " + p.sexo.name()));
 
@@ -45,10 +53,8 @@ public class App {
             System.out.println(personaje.getNombre());
         }*/
 
-        /*
-        personajes.stream().forEach(p -> {
-            System.out.println(p.getNombre());
-        });*/
+        
+        personajes.stream().forEach(p -> System.out.println(p.getNombre()));
 
         /*
         personajes
